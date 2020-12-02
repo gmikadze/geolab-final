@@ -1,0 +1,22 @@
+@mixin back-position ($attach, $position, $size) {
+    background-attachment: $attach;
+    background-repeat: no-repeat;
+    background-position: $position;
+    background-size: $size;
+}
+@mixin flex($justify, $vertical, $wrapping){
+    display: flex;
+    justify-content: $justify;
+    vertical-align: $vertical;
+    align-items: center;
+    flex-wrap: $wrapping;
+}
+@mixin my-pic($fit, $bradius, $mheight, $mwidth){
+    border-radius: $bradius;
+    max-height: $mheight;
+    max-width: $mwidth;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    object-fit: $fit;
+}

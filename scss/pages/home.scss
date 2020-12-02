@@ -1,0 +1,102 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../main/mixins.scss';
+@import '../main/classes.scss';
+.page1{
+    @extend %max-width;
+    background-image: url(../pics/back.jpg);
+    @include back-position(fixed, center, cover);
+    header{
+        position: relative;
+        @extend %max-width;
+        .onav{
+            transition: top 1s;
+            @extend %ou-nav;
+            .oulogo{
+                height: $sizeLogo;
+            }
+            .second{
+                a{
+                    @extend %headera;
+                }
+                .ou-menu{
+                    margin: auto;
+                    .ou-item{
+                        @include flex(space-between, middle, nowrap);
+                        @extend %drop-item;
+                        @extend %hovers;
+                        img{
+                            @extend %my-imgclass-head;
+                        }
+                    }
+                }
+            }
+            .hamburger-menu {
+                @extend %hamburger;
+                div {
+                    @extend %ham-divs;
+                    transition: all 0.5s linear;
+                }
+                &.open {
+                    .one {
+                        transform: translate(-4px, 10px) rotate(405deg);
+                    }
+            
+                    .two {
+                        opacity: 0;
+                    }
+            
+                    .three {
+                        transform: translate(-4px, -10px) rotate(-405deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .my{
+        background-color: $dark;
+        h2{
+            @extend %jumbotitle;
+        }
+        .my-in{
+            background-color: grey;
+            &:hover{
+                background-color: $dark;
+                transition: linear 0.5s;
+                .text{
+                    color: whitesmoke;
+                }
+            }
+            @include flex(space-around, middle, wrap);
+            img{
+                @include my-pic(cover, 10px, 400px, 700px);
+                // min-width: 500px;
+                // padding: 10px;
+            }
+            .text{
+                max-width: 800px;
+                color: black;
+                // &:hover{
+                //     color: whitesmoke;
+                //     transition: linear 0.3s;
+                // }
+                .choose{
+                    border: 1px red solid;
+                    @include flex(space-between, center, wrap);
+                    img{
+                        @include my-pic(cover, 20px, 100px, 100px);
+                    }
+                }
+            }
+        }
+    }
+
+    .my-box-2{
+        .carousel-item{
+            padding: $minilogo 0px;
+            img{
+                @include my-pic(cover, 50px, $picH007, $max-pic-w);
+            }
+        }
+    }
+}
