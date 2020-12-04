@@ -92,10 +92,11 @@
     }
 
     .my-box-2{
+        @extend %my-box-2;
         .carousel-item{
             padding: $minilogo 0px;
             img{
-                @include my-pic(cover, 50px, $picH007, $max-pic-w);
+                @include my-pic(cover, 20px, $picH007, $max-pic-w);
             }
         }
     }
