@@ -1,0 +1,95 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../main/variables.scss';
+@import '../main/classes.scss';
+@import '../main/mixins.scss';
+.pagewhisky{
+    background-image: url(../../pics/back.jpg);
+    @extend %max-width;
+    overflow: hidden;
+    .navbar-header{
+        @extend %max-width;
+        .onav{
+            transition: top 1s;
+            @extend %ou-nav;
+            .oulogo{
+                height: $sizeLogo;
+            }
+            .second{
+                a{
+                    @extend %headera;
+                }
+                .ou-menu{
+                    .ou-item{
+                        @include flex(space-between, middle, nowrap);
+                        @extend %drop-item;
+                        @extend %hovers;
+                        img{
+                            @extend %my-imgclass-head;
+                        }
+                    }
+                }
+            }
+            .hamburger-menu {
+                @extend %hamburger;
+                div {
+                    @extend %ham-divs;
+                    transition: all 0.5s linear;
+                }
+                &.open {
+                    .one {
+                        transform: translate(-4px, 10px) rotate(405deg);
+                    }
+            
+                    .two {
+                        opacity: 0;
+                    }
+            
+                    .three {
+                        transform: translate(-4px, -10px) rotate(-405deg);
+                    }
+                }
+            }
+        }
+    }
+    .my-test{
+        color: white;
+        padding: 20px 0;
+        .card-deck{
+            .card{
+                &:hover{
+                    height: 550px;
+                    transition: linear 0.5s;
+                }
+            }
+            .card-john{
+                border-radius: 20px;
+                height: 600px;
+                background: url(../../pics/john2.jpg) no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .card-james{
+                border-radius: 20px;
+                height: 600px;
+                background: url(../../pics/jameson-whiskey.jpg) no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .card-jack{
+                border-radius: 20px;
+                height: 600px;
+                background: url(../../pics/jack2.jpg) no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .card-chivas{
+                border-radius: 20px;
+                height: 600px;
+                background: url(../../pics/chivas.jpg) no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+    
+        }
+    }
+}

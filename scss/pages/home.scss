@@ -5,6 +5,7 @@
     @extend %max-width;
     background-image: url(../pics/back.jpg);
     @include back-position(fixed, center, cover);
+    overflow: hidden;
     header{
         position: relative;
         @extend %max-width;
@@ -51,9 +52,24 @@
                 }
             }
         }
+    }//header end
+    .video{
+        video{
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
     }
-
-    .my{
+    .my-second-box{
+        @extend %max-width;
+        .carousel-item{
+            height: 100vh;
+            img{
+                @include static-pic(cover, 0px, 100%, 100%);
+            }
+        }
+    }
+    .my-third-box{
         background-color: $dark;
         h2{
             @extend %jumbotitle;
@@ -67,36 +83,29 @@
                     color: whitesmoke;
                 }
             }
-            @include flex(space-around, middle, wrap);
-            img{
-                @include my-pic(cover, 10px, 400px, 700px);
-                // min-width: 500px;
-                // padding: 10px;
-            }
-            .text{
-                max-width: 800px;
-                color: black;
-                // &:hover{
-                //     color: whitesmoke;
-                //     transition: linear 0.3s;
-                // }
-                .choose{
-                    border: 1px red solid;
-                    @include flex(space-between, center, wrap);
-                    img{
-                        @include my-pic(cover, 20px, 100px, 100px);
-                    }
+            .image-left{
+                img{
+                    width: 100%;
+                    height: 640px;
+                    object-fit: cover;
                 }
             }
-        }
-    }
-
-    .my-box-2{
-        @extend %my-box-2;
-        .carousel-item{
-            padding: $minilogo 0px;
-            img{
-                @include my-pic(cover, 20px, $picH007, $max-pic-w);
+            .text{
+                color: black;
+                .choose{
+                    @include flex(space-around, middle, nowrap);
+                    .choice{
+                        text-align: center;
+                        img{
+                            @include static-pic(cover, 7px, 100px, 100px);
+                            &:hover{
+                                @include static-pic(cover, 20px, 150px, 150px);
+                                transition: linear 0.8s;
+                            }
+                        }
+    
+                    }
+                }
             }
         }
     }

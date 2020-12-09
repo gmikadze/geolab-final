@@ -6,7 +6,7 @@ var menus = document.getElementsByClassName('hamburger-menu');
     });
 });
 
-      //scroll
+      //scroll hiding top
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;

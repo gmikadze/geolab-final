@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="page1">
-        <header class="navbar-header fixed-top">
+        <header class="navbar-header">
             <nav class="nav onav navbar navbar-expand-lg bg-dark" id="navbar">
                 <a class="navbar-brand logo" href="#">
                     <img src="pics/logo.png" alt="logo" class="img oulogo">
@@ -20,13 +20,13 @@
                     <div class="icon-bar three"></div>
                 </button>
                 <div class="collapse navbar-collapse" id="mybar">
-                    <ul class="nav navbar-nav mr-auto">
+                    <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item m-auto second">
                             <div class="btn-group m-1">
                                 <a href="#whiskey" class="btn btn-warning">
                                     Whisky
                                 </a>
-                                <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="collapse" data-target="#navbarToggleWhiskey" aria-controls="navbarToggleCognac" aria-expanded="false" aria-label="Toggle navigation">
+                                <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="collapse" data-target="#navbarToggleWhiskey" aria-controls="navbarToggleWhiskey" aria-expanded="false" aria-label="Toggle navigation">
 
                                 </button>
                                 <div class="collapse ou-menu" id="navbarToggleWhiskey" aria-labelledby="navbarToggleWhiskey">
@@ -44,7 +44,7 @@
                                     </a>
                                     <a class="ou-item" href="#">
                                         <h6>Chivas</h6>
-                                        <img src="pics/chivas.jpeg" alt="chivas">
+                                        <img src="pics/chivas.jpg" alt="chivas">
                                     </a>
                                 </div>
                             </div>
@@ -137,8 +137,11 @@
                 </div>
             </nav>
         </header>
-        <div id="slider" class="m-auto">
-            <div id="carouselExampleIndicators" class="my-box-2 carousel slide" data-ride="carousel">
+        <section class="video">
+            <video src="pics/backVideoAll.mp4" no-controls autoplay muted loop playsinline class="m-auto"></video>
+        </section>
+        <section id="slider" class="my-second-box">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -147,32 +150,29 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="pics/cognac.jpg" alt="TheBar">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="pics/wine.jpg" class="d-block w-100" alt="wine">
+                        <img src="pics/wine.jpg" alt="wine">
                         <div class="carousel-caption">
                             <h5>Wine</h5>
                             <p>Blended In Georgia</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="pics/whiskey.jpg" class="d-block w-100" alt="whiskey">
-                        <div class="carousel-caption d-md-block">
+                        <img src="pics/whiskey.jpg" alt="whiskey">
+                        <div class="carousel-caption">
                             <h5>Whiskey</h5>
                             <p>Blended In Scotland</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="pics/vodka.jpg" class="d-block w-100" alt="vodka">
-                        <div class="carousel-caption d-md-block">
+                        <img src="pics/vodka.jpg" alt="vodka">
+                        <div class="carousel-caption">
                             <h5>Vodka</h5>
                             <p>Blended In Poland</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="pics/hennessy1.jpeg" class="d-block w-100" alt="cognac">
-                        <div class="carousel-caption d-md-block">
+                        <img src="pics/hennessy1.jpeg" alt="cognac">
+                        <div class="carousel-caption">
                             <h5>Cognac</h5>
                             <p>Blended In France</p>
                         </div>
@@ -186,16 +186,16 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
-              </div>
-        </div>
-        <div id="whiskey" class="jumbotron-fluid pb-5 mb-4 my">
+            </div>
+        </section>
+        <section id="whiskey" class="mt-5 my-third-box">
             <h2>Whisky</h2>
-            <div class="container-fluid my-in">
-                <div class="image-left">
+            <div class="row my-in">
+                <div class="image-left col-md-6 col-sm-12">
                     <img src="pics/whiskey.jpg" alt="whiskey">
                 </div>
-                <div class="text">
-                    <h1>Did You Know That:</h1>      
+                <div class="text col-md-6 col-sm-12 mt-5">
+                    <h3>Did You Know That:</h3>      
                     <h4>
                         The word whisky is an anglicisation of the Classical Gaelic word "uisce" meaning "water"...
                     </h4>
@@ -203,92 +203,76 @@
                         The first Georgian whisky has been made by Georgian wine-maker, co-founder of "Askaneli Brothers".
                         On the bottle and tag design worked Georgian product designer Zviad Tsikolia
                     </h4>
-                    <div class="choose mt-5">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
+                    <a class="btn btn-transparent btn-xl btn-outline-light m-5" href="pages/whisky.html">
+                        learn more
+                    </a>
+                    <div class="choose">
+                        <div class="choice">
+                            <h5>Jack Daniel's</h5>
+                            <img src="pics/jack2.jpg" alt="jack">
+                        </div>
+                        <div class="choice">
+                            <h5>Chivas Regal</h5>
+                            <img src="pics/chivas.jpg" alt="chivas">
+                        </div>
+                        <div class="choice">
+                            <h5>Jameson Whisky</h5>
+                            <img src="pics/jameson-whiskey.jpg" alt="james">
+                        </div>
+                        <div class="choice">
+                            <h5>Johnnie Walker</h5>
+                            <img src="pics/john2.jpg" alt="john">
+                        </div>
                     </div>        
                 </div>
             </div>
-        </div>
-        <div id="whiskey" class="jumbotron-fluid pb-5 mb-4 my">
-            <h2>Whisky</h2>
-            <div class="container-fluid my-in">
-                <div class="image-left">
-                    <img src="pics/whiskey.jpg" alt="whiskey">
+        </section>
+        <section id="wine" class="mt-5 my-third-box">
+            <h2>Wine</h2>
+            <div class="row my-in">
+                <div class="image-left col-md-6 col-sm-12">
+                    <img src="pics/wine2.jpg" alt="wine">
                 </div>
-                <div class="text">
-                    <h1>Did You Know That:</h1>      
+                <div class="text col-md-6 col-sm-12 mt-5">
+                    <h3>Did You Know That:</h3>      
                     <h4>
-                        The word whisky is an anglicisation of the Classical Gaelic word "uisce" meaning "water"...
+                        The earliest evidence of wine is from ancient China(7000BC), 
+                        Georgia(6000BC), Iran(5000BC), and Sicily(4000BC).
                     </h4>
                     <h4>
-                        The first Georgian whisky has been made by Georgian wine-maker, co-founder of "Askaneli Brothers".
-                        On the bottle and tag design worked Georgian product designer Zviad Tsikolia
+                        Some wine labels suggest opening the bottle and letting the wine "breathe" 
+                        for a couple of hours before serving, while others recommend drinking it 
+                        immediately.
                     </h4>
-                    <div class="choose mt-5">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
+                    <a class="btn btn-transparent btn-xl btn-outline-light m-5" href="pages/whisky.html">
+                        learn more
+                    </a>
+                    <div class="choose">
+                        <div class="choice">
+                            <h5>Lafite Rothschild</h5>
+                            <img src="pics/wine1.jpg" alt="Rothschild">
+                        </div>
+                        <div class="choice">
+                            <h5>Askaneli Brothers</h5>
+                            <img src="pics/askaneli1.jpg" alt="Askaneli">
+                        </div>
+                        <div class="choice">
+                            <h5>Chateau Mukhrani</h5>
+                            <img src="pics/mukhran.jpg" alt="mukhran">
+                        </div>
+                        <div class="choice">
+                            <h5>Chateau Montpix</h5>
+                            <img src="pics/montpix.jpg" alt="Montpix">
+                        </div>
                     </div>        
                 </div>
             </div>
-        </div>
-        <div id="whiskey" class="jumbotron-fluid pb-5 mb-4 my">
-            <h2>Whisky</h2>
-            <div class="container-fluid my-in">
-                <div class="image-left">
-                    <img src="pics/whiskey.jpg" alt="whiskey">
-                </div>
-                <div class="text">
-                    <h1>Did You Know That:</h1>      
-                    <h4>
-                        The word whisky is an anglicisation of the Classical Gaelic word "uisce" meaning "water"...
-                    </h4>
-                    <h4>
-                        The first Georgian whisky has been made by Georgian wine-maker, co-founder of "Askaneli Brothers".
-                        On the bottle and tag design worked Georgian product designer Zviad Tsikolia
-                    </h4>
-                    <div class="choose mt-5">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                    </div>        
-                </div>
-            </div>
-        </div>
-        <div id="whiskey" class="jumbotron-fluid pb-2 mb-4 my">
-            <h2>Whisky</h2>
-            <div class="container-fluid my-in">
-                <div class="image-left">
-                    <img src="pics/whiskey.jpg" alt="whiskey">
-                </div>
-                <div class="text">
-                    <h1>Did You Know That:</h1>      
-                    <h4>
-                        The word whisky is an anglicisation of the Classical Gaelic word "uisce" meaning "water"...
-                    </h4>
-                    <h4>
-                        The first Georgian whisky has been made by Georgian wine-maker, co-founder of "Askaneli Brothers".
-                        On the bottle and tag design worked Georgian product designer Zviad Tsikolia
-                    </h4>
-                    <div class="choose mt-5">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                        <img src="pics/jack.jpeg" alt="jack">
-                    </div>        
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="my2">
-            
-        </div>
+        </section>
+        <footer class="row warning bg-dark">
+            <p class="col-sm-12 col-lg-4">Final Project for Geo-Lab</p>
+            <p class="col-sm-12 col-lg-4">Created by Giorgi Mikadze</p>
+            <p class="col-sm-12 col-lg-4">Final Project for Geo-Lab</p>
+        </footer>
     </div>
     <script src="js/ham.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
