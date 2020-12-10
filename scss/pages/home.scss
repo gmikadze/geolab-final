@@ -1,6 +1,10 @@
+@import './../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import './../../node_modules/bootstrap/scss/bootstrap-grid.scss';
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../main/mixins.scss';
+@import './../../node_modules/animate.css/animate.css';
+@import '../main/variables.scss';
 @import '../main/classes.scss';
+@import '../main/mixins.scss';
 .page1{
     @extend %max-width;
     background-image: url(../pics/back.jpg);
@@ -97,13 +101,67 @@
                     .choice{
                         text-align: center;
                         img{
-                            @include static-pic(cover, 7px, 100px, 100px);
+                            @include static-pic(cover, 7px, 300px, 100px);
                             &:hover{
-                                @include static-pic(cover, 20px, 150px, 150px);
-                                transition: linear 0.8s;
+                                @include static-pic(cover, 20px, 300px, 350px);
+                                transition: linear 0.5s;
                             }
                         }
     
+                    }
+                }
+            }
+        }
+    }
+    .anime{
+        position: relative;
+        .glass1{
+            height: 35px;
+            position: absolute;
+            right: -150px;
+            top: 25px;
+            animation: slide-in linear 2s infinite alternate;
+            animation-delay: 1s;
+        }
+        .glass2{
+            height: 20px;
+            position: absolute;
+            right: -150px;
+            top: 25px;
+            animation: slide-in linear 2s infinite alternate;
+            animation-delay: 3.5s;
+        }
+        .glass3{
+            height: 30px;
+            position: absolute;
+            right: -150px;
+            top: 15px;
+            animation: slide-in linear 2s infinite alternate;
+            animation-delay: 2s;
+        }
+        .bottle{
+            height: 120px;
+            position: absolute;
+            left: -150px;
+        }    
+    }
+    footer{
+        .foot{
+            @include flex(space-around, middle, wrap);
+            color: white;
+            .footer-div{
+                height: 200px;
+                .social{
+                    ul{
+                        li{
+                            display: inline-block;
+                            margin-left: 20px;
+                            font-size: 40px;
+                            i{
+                                color: whitesmoke;
+                                transform: translateX(-75%);
+                            }
+                        }
                     }
                 }
             }

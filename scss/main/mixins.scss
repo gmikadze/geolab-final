@@ -18,3 +18,14 @@
     margin: 0 auto;
     object-fit: $fit;
 }
+@keyframes slide-in {
+    from{
+        right: -150px;
+    }
+    50%{
+        right: 30px;
+    }
+    100%{
+        right: 100%;
+    }
+}
