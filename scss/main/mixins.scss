@@ -18,6 +18,12 @@
     margin: 0 auto;
     object-fit: $fit;
 }
+@mixin anime-pos($height, $right, $top,) {
+    height: $height;
+    position: absolute;
+    right: $right;
+    top: $top;
+}
 @keyframes slide-in {
     from{
         right: -150px;

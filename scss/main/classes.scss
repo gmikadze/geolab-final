@@ -10,7 +10,7 @@
     box-shadow: 5px 5px 5px;
 }
 %headera{
-    color: white;
+    color: $white;
     font-size: large;
     font-weight: bolder;
     letter-spacing: 5px;
@@ -46,16 +46,16 @@
     cursor: pointer;
 }
 %ham-divs{
-    background-color: white;
+    background-color: $white;
     border-radius: 5px;
     width: 30px;
     height: 5px;
     margin: 5px auto;
 }
 %jumbotitle{
-    background-color:$dark;
+    // background-color:$dark;
     text-align: center;
-    color: whitesmoke;
+    color: $white;
     letter-spacing: 15px;
     font-weight: bolder;
     font-size: 72px;

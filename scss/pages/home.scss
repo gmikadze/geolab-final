@@ -1,5 +1,3 @@
-@import './../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
-@import './../../node_modules/bootstrap/scss/bootstrap-grid.scss';
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import './../../node_modules/animate.css/animate.css';
 @import '../main/variables.scss';
@@ -56,25 +54,25 @@
                 }
             }
         }
-    }//header end
+    }
+    //header end
     .video{
         video{
             width: 100%;
-            height: 100vh;
+            height: $max-height;
             object-fit: cover;
         }
     }
     .my-second-box{
-        @extend %max-width;
         .carousel-item{
-            height: 100vh;
+            height: $max-height;
             img{
                 @include static-pic(cover, 0px, 100%, 100%);
             }
         }
     }
     .my-third-box{
-        background-color: $dark;
+        // background-color: $dark;
         h2{
             @extend %jumbotitle;
         }
@@ -96,19 +94,20 @@
             }
             .text{
                 color: black;
-                .choose{
-                    @include flex(space-around, middle, nowrap);
-                    .choice{
-                        text-align: center;
-                        img{
-                            @include static-pic(cover, 7px, 300px, 100px);
-                            &:hover{
-                                @include static-pic(cover, 20px, 300px, 350px);
-                                transition: linear 0.5s;
-                            }
+            }
+            .choose{
+                width: 100%;
+                @include flex(space-around, middle, wrap);
+                .choice{
+                    text-align: center;
+                    img{
+                        @include static-pic(cover, 7px, 300px, 300px);
+                        &:hover{
+                            @include static-pic(cover, 20px, 300px, 350px);
+                            transition: linear 0.5s;
                         }
-    
                     }
+
                 }
             }
         }
@@ -116,34 +115,20 @@
     .anime{
         position: relative;
         .glass1{
-            height: 35px;
-            position: absolute;
-            right: -150px;
-            top: 25px;
+            @include anime-pos(35px, -150px, 25px,);
             animation: slide-in linear 2s infinite alternate;
             animation-delay: 1s;
         }
         .glass2{
-            height: 20px;
-            position: absolute;
-            right: -150px;
-            top: 25px;
+            @include anime-pos(20px, -150px, 25px,);
             animation: slide-in linear 2s infinite alternate;
             animation-delay: 3.5s;
         }
         .glass3{
-            height: 30px;
-            position: absolute;
-            right: -150px;
-            top: 15px;
+            @include anime-pos(30px, -150px, 15px,);
             animation: slide-in linear 2s infinite alternate;
             animation-delay: 2s;
         }
-        .bottle{
-            height: 120px;
-            position: absolute;
-            left: -150px;
-        }    
     }
     footer{
         .foot{
